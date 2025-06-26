@@ -10,8 +10,8 @@ on:
         default: false
 
 env:
-  MY_WORFLOW_VAR: 'workflow'
-  MY_OVERWRITTEN_VAR: 'workflow'
+  MY_WORKFLOW_VAR: "workflow"
+  MY_OVERWRITTEN_VAR: "workflow"
 
 jobs:
   echo-data:
@@ -36,9 +36,9 @@ jobs:
         env:
           MY_OVERWRITTEN_VAR: 'step'
         run: |
-          echo "Workflow env: ${{ env.MY_WORFLOW_VAR }}"
-          echo "Overwritten env: ${{ env.MY_OVERWRITTEN_VAR }}
-      - name: Print Evn Variables
+          echo "Workflow env: ${{ env.MY_WORKFLOW_VAR }}"
+          echo "Overwritten env: ${{ env.MY_OVERWRITTEN_VAR }}"
+      - name: Print Env Variables
         run: |
-          echo "Workflow env: ${{ env.MY_WORFLOW_VAR}}"
+          echo "Workflow env: ${{ env.MY_WORKFLOW_VAR}}"
           echo "Overwritten env: ${{ env.MY_OVERWRITTEN_VAR}}"
